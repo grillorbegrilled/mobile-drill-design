@@ -45,7 +45,7 @@ class DrillEditorService {
   }
 
   get strideType() {
-    return this._strideType || StrideType.SixToFive;
+    return this._strideType || StrideType.EightToFive;
   }
 
   set strideType(value) {
