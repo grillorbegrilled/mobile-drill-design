@@ -26,6 +26,8 @@ import StrideType from './StrideType';
 
 /* eslint camelcase: 0 */
 
+//TODO: Explore adding 8/5 support by altering field dimensions instead of step size.
+//If successful, this will alleviate the need for separate 8/5 versions of various functions as well
 const fieldWidth = 1560; // / 2; // 624 * 2, //1560,
 const fieldHeight = 760; // / 2; // 312 * 2 //780;
 
