@@ -32,12 +32,12 @@ const fieldWidth = 1560; // / 2; // 624 * 2, //1560,
 const fieldHeight = 760; // / 2; // 312 * 2 //780;
 
 let widthInSteps = {
-  [StrideType.SixToFive]: 156,
+  [StrideType.SixToFive]: 156, //TODO pipe this through the new variable for 8/5 support.
   [StrideType.EightToFive]: 208,
 };
 
 let heightInSteps = {
-  [StrideType.SixToFive]: 76, // 6 + 24 + 16 + 24 + 6
+  [StrideType.SixToFive]: 76, //TODO pipe this through the new variable for 8/5 support. // 6 + 24 + 16 + 24 + 6
   [StrideType.EightToFive]: 100, // 8 + 32 + 20 + 32 + 8
 };
 
@@ -48,6 +48,7 @@ const oneStepY_8to5 = oneStepY_6to5 * 30 / 40; // fieldHeight / heightInSteps[St
 const oneStepX_8to5 = fieldWidth / widthInSteps[StrideType.EightToFive];
 const oneStepY_8to5_Adj = oneStepY_6to5 * 16 / 20;
 
+//TODO for 8/5 support, make this * 8.
 const fiveYardsX = oneStepX_6to5 * 6;
 const fiveYardsY = oneStepY_6to5 * 6;
 
@@ -100,10 +101,12 @@ class FieldDimensions {
     return oneStepX_8to5;
   }
 
+  //TODO for 8/5 support, change 8 to 12
   static get sixToFiveObliqueDeltaX() {
     return 6 / 8 * oneStepX_6to5;
   }
 
+  //TODO for 8/5 support, change 8 to 12
   static get sixToFiveObliqueDeltaY() {
     return 6 / 8 * oneStepY_6to5;
   }
@@ -143,10 +146,12 @@ class FieldDimensions {
     return fieldHeight - fiveYardsY;
   }
 
+  //TODO for 8/5 support, change 24 to 28
   static get farHashY() {
     return oneStepY_6to5 * 24 + this.farSidelineY;
   }
 
+  //TODO for 8/5 support, change 24 to 28
   static get nearHashY() {
     return this.nearSidelineY - oneStepY_6to5 * 24;
   }
