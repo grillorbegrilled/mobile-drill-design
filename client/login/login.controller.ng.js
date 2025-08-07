@@ -5,7 +5,8 @@ angular.module('drillApp')
   $scope.viewName = 'login';
   $scope.message = '';
 
-  $scope.logIn = () => {
+  $scope.logIn = () => $location.path('/'); //Disable login for testing
+    /*{
       userService
         .logIn($scope.email, $scope.password)
         .then(() => {
@@ -14,5 +15,5 @@ angular.module('drillApp')
         .catch((ex) => {
           $scope.message = ex.inner.reason;
         });
-  };
+  };*/
 });
