@@ -23,7 +23,7 @@ angular.module('drillApp')
         });
 
         // FOR NOW, leave switch disabled
-        $('[name=\'stride-type-switch\']').bootstrapSwitch('disabled', true);
+        //$('[name=\'stride-type-switch\']').bootstrapSwitch('disabled', true);
       };
 
       ctrl.$onDestroy = function() {
